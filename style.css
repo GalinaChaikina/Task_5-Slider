@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(196, 192, 192);
+    padding-top: 30px;
+    
+}
+
+h1 {
+    font-family: Cambria;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 46px;
+    color: rgb(51, 51, 51);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.slider-container {
+    max-width: 800px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+}
+
+/* кнопки */
+#btn-left, #btn-right {
+    position: absolute;
+    left: 0;
+    top: 0; 
+    height: 100%;
+    width: 50px;
+    background-color: gray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: 0.7;
+    font-size: 50px;
+    transition: opacity 0.2s ease;
+}
+
+#btn-right {
+    left: auto;
+    right: 0;
+}
+
+#btn-left:hover, #btn-right:hover {
+    opacity: 0.5;
+}
+
+
+/* картинки */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 2s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* точки */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+
+}
